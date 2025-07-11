@@ -65,7 +65,7 @@ class Jobcontroller extends Controller
     public function update(Job $job)
     {
 
-        // Gate::authorize('edit', $job);
+        Gate::authorize('edit', $job);
 
         request()->validate([
             'title'=>'required|min:3',
